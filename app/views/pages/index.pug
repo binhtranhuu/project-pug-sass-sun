@@ -1,5 +1,9 @@
 extends ../layouts/layout
 
 block vars
-  -title = 'This Home Page'
-  -bodyClass = 'page-wrapper'
+	-title = 'This Home Page'
+	-bodyClass = 'page-wrapper'
+
+block main
+	main.main
+		include ../blocks/intro

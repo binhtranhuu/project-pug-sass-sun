@@ -1,0 +1,41 @@
+.intro__slider-container {
+  position: relative;
+
+  .intro__slide {
+    position: relative;
+    background-color: rgb(194, 151, 99);
+    background-image: url("../images/slide-bg-1-1.png");
+
+    img {
+      height: 430px;
+      object-fit: contain;
+      margin-left: 25rem;
+    }
+  }
+
+  .intro__content {
+    position: absolute;
+    left: 6rem;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+
+    .intro__subtitle {
+      color: #fff;
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro__title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 5.2rem;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.2rem;
+      text-indent: -0.2rem;
+    }
+  }
+}
