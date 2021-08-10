@@ -1,0 +1,52 @@
+.banner {
+  position: relative;
+  margin-bottom: 2rem;
+
+  .banner__content {
+    display: inline-block;
+    position: absolute;
+    padding-top: 0.4rem;
+    left: 4rem;
+    top: 50%;
+    z-index: 2;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    display: inline-block;
+  }
+
+  .banner__subtitle {
+    color: #777;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+  }
+
+  .banner__title {
+    color: #333;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .banner__link {
+    font-weight: 400;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
