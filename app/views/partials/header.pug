@@ -41,4 +41,107 @@
 							li
 								a(href='#')
 									i.las.la-user
-									| Login							
+									| Login
+	.header__middle-wrapper
+		.header__middle
+			.container 
+				.header__left
+					a.logo(href="#") 
+						img(src="../images/logo.png", alt="Logo")
+					nav.main__menu 
+						ul.menu.menu__arrows
+							li 
+								a(href="#") Home
+							li 
+								a(href="#").menu__arrows-ul Shop
+								ul 
+									li 
+										a(href="#") About
+									li 
+										a(href="#") Contact
+									li 
+										a(href="#") Login
+									li 
+										a(href="#") FAQs
+									li 
+										a(href="#") Error 404
+									li 
+										a(href="#") Coming Soon
+							li 
+								a(href="#").menu__arrows-ul Product
+								ul 
+									li 
+										a(href="#").menu__arrows-ul About
+										ul 
+											li 
+												a(href="#") About 1
+											li 
+												a(href="#") About 2
+									li 
+										a(href="#") Contact
+									li 
+										a(href="#") Login
+									li 
+										a(href="#") FAQs
+									li 
+										a(href="#") Error 404
+									li 
+										a(href="#") Coming Soon
+							li 
+								a(href="#").menu__arrows-ul Pages
+								ul 
+									li 
+										a(href="#").menu__arrows-ul About
+										ul 
+											li 
+												a(href="#") About 1
+											li 
+												a(href="#") About 2
+									li 
+										a(href="#") Contact
+									li 
+										a(href="#") Login
+									li 
+										a(href="#") FAQs
+									li 
+										a(href="#") Error 404
+									li 
+										a(href="#") Coming Soon
+							li 
+								a(href="#") Blogs
+							li 
+								a(href="#") Elements
+				.header__right
+					.header__search
+						button.header__search-toggle.active
+							i.las.la-search
+						form(action='#' method='get')
+							.header__search-wrapper.show
+								label.sr-only(for='q' value='' required='') Search
+								input.form-control(type='text' name='q' placeholder='Search product ...' required='' value='')
+					.dropdown.cart__dropdown
+						a.dropdown-toggle(href='#')
+							i.las.la-shopping-cart
+							span.cart__count 1
+						.dropdown-menu.dropdown-menu-right
+							.cart__products-dropdown
+								.product.justify-content-between
+									.product__cart-details
+										h4.product__title
+											a(href='#') Butler Stool Ladder
+										span.cart__product-info
+											span.cart__product-qty 1 
+											| x $20.00
+									figure.product__image-container.ml-2
+										a.product__image(href='#')
+											img(src='../images/product_3_1.jpg' alt='product')
+									button.btn-remove(title='Remove Product')
+										i.las.la-times
+							.cart__dropdown-total
+								span Total
+								span.cart__total-price $20.00
+							.cart__dropdown-action
+								a.btn.btn-primary(href='#') View Cart
+								a.btn.btn-outline-primary-2(href='#')
+									span Checkout
+									i.las.la-long-arrow-alt-right
