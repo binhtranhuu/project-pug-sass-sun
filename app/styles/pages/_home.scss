@@ -63,6 +63,7 @@
 
 .post__wrapper {
   text-align: center;
+  cursor: pointer;
   -webkit-transition: -webkit-box-shadow 0.35s ease;
   transition: -webkit-box-shadow 0.35s ease;
   transition: box-shadow 0.35s ease;
@@ -210,5 +211,30 @@
   span {
     font-size: 1.4rem;
     line-height: 1.4;
+  }
+}
+
+.cta {
+  background-image: url("../images/bg-cta.jpg");
+
+  .cta__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cta__title {
+      color: #fff;
+      font-weight: 500;
+      font-size: 2.8rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0;
+    }
+
+    .cta__desc {
+      color: #fff;
+      font-size: 1.6rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
   }
 }
