@@ -2,6 +2,27 @@
   position: relative;
   margin-bottom: 2rem;
 
+  &:hover.banner--overlay::before {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.banner--overlay::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(51, 51, 51, 0.4);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+
   .banner__content {
     display: inline-block;
     position: absolute;
@@ -13,6 +34,68 @@
     transform: translateY(-50%);
     position: absolute;
     display: inline-block;
+  }
+
+  .banner__content.banner__content--center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .banner__content.banner__content--center .banner__link {
+    font-size: 1.6rem;
+    display: inline-block;
+    background-color: #fff;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    min-width: 154px;
+    border-radius: 0.2rem;
+    position: absolute;
+    bottom: -1.8rem;
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .banner__content.banner__content--center .banner__link:hover .banner__title {
+    opacity: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+
+  .banner__content.banner__content--center .banner__title {
+    font-size: 1.6rem;
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+
+  .banner__content.banner__content--center .banner__link-text {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+
+  .banner__content.banner__content--center
+    .banner__link:hover
+    .banner__link-text {
+    opacity: 1;
+    background-color: #c96;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
   }
 
   .banner__subtitle {

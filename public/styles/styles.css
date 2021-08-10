@@ -1705,6 +1705,23 @@ blockquote {
 .banner {
   position: relative;
   margin-bottom: 2rem; }
+  .banner:hover.banner--overlay::before {
+    visibility: visible;
+    opacity: 1; }
+  .banner.banner--overlay::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(51, 51, 51, 0.4);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
   .banner .banner__content {
     display: inline-block;
     position: absolute;
@@ -1716,6 +1733,64 @@ blockquote {
     transform: translateY(-50%);
     position: absolute;
     display: inline-block; }
+  .banner .banner__content.banner__content--center {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .banner .banner__content.banner__content--center .banner__link {
+    font-size: 1.6rem;
+    display: inline-block;
+    background-color: #fff;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    min-width: 154px;
+    border-radius: 0.2rem;
+    position: absolute;
+    bottom: -1.8rem;
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    overflow: hidden;
+    cursor: pointer; }
+  .banner .banner__content.banner__content--center .banner__link:hover .banner__title {
+    opacity: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%); }
+  .banner .banner__content.banner__content--center .banner__title {
+    font-size: 1.6rem;
+    margin: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .banner .banner__content.banner__content--center .banner__link-text {
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%); }
+  .banner .banner__content.banner__content--center
+.banner__link:hover
+.banner__link-text {
+    opacity: 1;
+    background-color: #c96;
+    transform: translateY(0);
+    -webkit-transform: translateY(0); }
   .banner .banner__subtitle {
     color: #777;
     font-weight: 300;
@@ -1756,3 +1831,8 @@ blockquote {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+
+.title-lg {
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -.025em; }
