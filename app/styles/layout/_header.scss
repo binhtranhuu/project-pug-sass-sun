@@ -567,6 +567,11 @@
     max-height: 28rem;
     margin-top: -1rem;
     overflow-y: auto;
+
+    .product__image {
+      display: block !important;
+      opacity: 1 !important;
+    }
   }
 
   .product {

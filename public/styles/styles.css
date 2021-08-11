@@ -1393,6 +1393,9 @@ blockquote {
     max-height: 28rem;
     margin-top: -1rem;
     overflow-y: auto; }
+    .cart__dropdown .cart__products-dropdown .product__image {
+      display: block !important;
+      opacity: 1 !important; }
   .cart__dropdown .product {
     position: relative;
     display: -webkit-box;
@@ -1777,6 +1780,17 @@ blockquote {
     .footer .footer__payment img {
       width: 272px;
       height: 20px; }
+  @media screen and (max-width: 767px) {
+    .footer .footer__bottom .container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto; }
+    .footer .footer__payment {
+      padding-top: 1.2rem;
+      margin: 0 auto; } }
 
 .social__icon {
   -webkit-box-pack: center;
@@ -1882,7 +1896,7 @@ blockquote {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .btn span {
-    line-height: 1; }
+    line-height: 1.5; }
   .btn i:first-child {
     margin-right: 1rem; }
   .btn i:last-child {
