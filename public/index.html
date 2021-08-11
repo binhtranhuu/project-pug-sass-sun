@@ -55,8 +55,21 @@
       <div class="header__middle-wrapper">
         <div class="header__middle">
           <div class="container"> 
-            <div class="header__left"><a class="logo" href="#"> <img src="../images/logo.png" alt="Logo"></a>
+            <div class="header__left">
+              <button class="menu__mobile-toggle">
+                <label for="menu__input-check"> <i class="las la-bars"></i></label>
+              </button><a class="logo" href="#"> <img src="../images/logo.png" alt="Logo"></a>
+              <input class="menu__input" id="menu__input-check" type="checkbox" hidden>
+              <label class="bg-overlay" for="menu__input-check"></label>
               <nav class="main__menu"> 
+                <div class="menu__mobile">
+                  <label class="menu__mobile-close" for="menu__input-check"><i class="las la-times"></i></label>
+                </div>
+                <form class="mobile__search" action="#" method="get">
+                  <label class="sr-only" for="mobile__search">Search</label>
+                  <input class="form-control" id="mobile__search" type="text" name="mobile__search" placeholder="Search product ..." required="" value="">
+                  <button class="btn btn-primary" type="submit"><i class="las la-search"></i></button>
+                </form>
                 <ul class="menu menu__arrows">
                   <li> <a href="#">Home</a></li>
                   <li> <a class="menu__arrows-ul" href="#">Shop</a>
@@ -102,6 +115,7 @@
                   <li> <a href="#">Blogs</a></li>
                   <li> <a href="#">Elements</a></li>
                 </ul>
+                <div class="mobile__socials"><a class="social__icon" href="#" title="Facebook"><i class="lab la-facebook-f"></i></a><a class="social__icon" href="#" title="Twitter"><i class="lab la-twitter"></i></a><a class="social__icon" href="#" title="Instagram"><i class="lab la-instagram"></i></a><a class="social__icon" href="#" title="Youtube"><i class="lab la-youtube"></i></a><a class="social__icon" href="#" title="Pinterest"><i class="lab la-pinterest"></i></a></div>
               </nav>
             </div>
             <div class="header__right">
@@ -135,10 +149,10 @@
       </div>
     </header>
     <main class="main">
-      <section class="intro pt-5 pb-4"> 
+      <section class="intro pt-5 pb-4">
         <div class="container"> 
           <div class="row"> 
-            <div class="col-lg-8">
+            <div class="col-lg-8 mb-2">
               <div class="carousel slide" id="carouselExampleControls" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item intro__slider-container">
@@ -172,20 +186,21 @@
             </div>
             <div class="col-lg-4">
               <div class="intro__banners">
-                <div class="row"> </div>
-                <div class="col-md-6 col-lg-12">
-                  <div class="banner"><img src="../images/banner-1.jpg" alt="Banner"/>
-                    <div class="banner__content"> 
-                      <h4 class="banner__subtitle">Clearence</h4>
-                      <h3 class="banner__title"><a href="#">Chairs &amp; Chaises<br/>Up to 40% off</a></h3><a class="banner__link" href="#">Shop now</a>
+                <div class="row"> 
+                  <div class="col-md-6 col-lg-12">
+                    <div class="banner"><img src="../images/banner-1.jpg" alt="Banner"/>
+                      <div class="banner__content"> 
+                        <h4 class="banner__subtitle">Clearence</h4>
+                        <h3 class="banner__title"><a href="#">Chairs &amp; Chaises<br/>Up to 40% off</a></h3><a class="banner__link" href="#">Shop now</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-6 col-lg-12">
-                  <div class="banner"><img src="../images/banner-2.jpg" alt="Banner"/>
-                    <div class="banner__content"> 
-                      <h4 class="banner__subtitle">New in</h4>
-                      <h3 class="banner__title"><a href="#">Kitchen &amp; Dinning<br/>Collection</a></h3><a class="banner__link" href="#">Discover Now</a>
+                  <div class="col-md-6 col-lg-12">
+                    <div class="banner"><img src="../images/banner-2.jpg" alt="Banner"/>
+                      <div class="banner__content"> 
+                        <h4 class="banner__subtitle">New in</h4>
+                        <h3 class="banner__title"><a href="#">Kitchen &amp; Dinning<br/>Collection</a></h3><a class="banner__link" href="#">Discover Now</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -217,7 +232,7 @@
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_1_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_1_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -236,7 +251,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_2_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_2_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -255,7 +270,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><span class="product__label product__label-cirle product__label-new">new</span><a href="#"> <img class="product__image" src="../images/product_3_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_3_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -274,7 +289,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_4_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_4_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -293,7 +308,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_5_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_5_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -312,7 +327,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_6_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_6_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -331,7 +346,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_7_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_7_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -350,7 +365,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_8_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_8_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -373,7 +388,7 @@
             </div>
             <div class="tab-pane fade" id="pills-furniture" role="tabpanel" aria-labelledby="pills-furniture-tab">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_1_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_1_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -392,7 +407,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_2_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_2_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -411,7 +426,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><span class="product__label product__label-cirle product__label-new">new</span><a href="#"> <img class="product__image" src="../images/product_3_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_3_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -430,7 +445,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_4_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_4_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -449,7 +464,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_5_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_5_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -468,7 +483,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_6_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_6_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -487,7 +502,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_7_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_7_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -506,7 +521,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_8_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_8_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -529,7 +544,7 @@
             </div>
             <div class="tab-pane fade" id="pills-decoration" role="tabpanel" aria-labelledby="pills-decoration-tab">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_1_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_1_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -548,7 +563,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_2_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_2_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -567,7 +582,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><span class="product__label product__label-cirle product__label-new">new</span><a href="#"> <img class="product__image" src="../images/product_3_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_3_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -586,7 +601,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_4_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_4_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -605,7 +620,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_5_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_5_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -624,7 +639,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_6_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_6_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -643,7 +658,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_7_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_7_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -662,7 +677,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_8_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_8_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -685,7 +700,7 @@
             </div>
             <div class="tab-pane fade" id="pills-lighting" role="tabpanel" aria-labelledby="pills-lighting-tab">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_1_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_1_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -704,7 +719,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_2_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_2_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -723,7 +738,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><span class="product__label product__label-cirle product__label-new">new</span><a href="#"> <img class="product__image" src="../images/product_3_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_3_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -742,7 +757,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_4_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_4_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -761,7 +776,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_5_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_5_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -780,7 +795,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_6_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_6_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -799,7 +814,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_7_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_7_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -818,7 +833,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_8_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_8_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -854,6 +869,13 @@
               </div>
             </div>
             <div class="col-sm-6 col-lg-4">
+              <div class="banner banner--overlay">
+                <figure> <img src="../images/banner-category-4.jpg" alt="Banner Category"/></figure>
+                <div class="banner__content banner__content--center"> <a class="banner__link">
+                    <h3 class="banner__title">Living Room</h3><span class="banner__link-text">Shop Now<i class="las la-long-arrow-alt-right ml-2"></i></span></a></div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
               <div class="row"> 
                 <div class="col-lg-12 col-sm-6 col-xs-12">
                   <div class="banner banner--overlay">
@@ -868,15 +890,6 @@
                     <div class="banner__content banner__content--center"> <a class="banner__link">
                         <h3 class="banner__title">Lighting</h3><span class="banner__link-text">Shop Now<i class="las la-long-arrow-alt-right ml-2"></i></span></a></div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <div class="banner banner--overlay">
-                <div class="banner banner--overlay">
-                  <figure> <img src="../images/banner-category-4.jpg" alt="Banner Category"/></figure>
-                  <div class="banner__content banner__content--center"> <a class="banner__link">
-                      <h3 class="banner__title">Living Room</h3><span class="banner__link-text">Shop Now<i class="las la-long-arrow-alt-right ml-2"></i></span></a></div>
                 </div>
               </div>
             </div>
@@ -895,7 +908,7 @@
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-all-arrivals" role="tabpanel" aria-labelledby="pills-all-arrivals-tab">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_1_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_1_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -914,7 +927,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_2_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_2_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -933,7 +946,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><span class="product__label product__label-cirle product__label-new">new</span><a href="#"> <img class="product__image" src="../images/product_3_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_3_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -952,7 +965,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_4_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_4_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -971,7 +984,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_5_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_5_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -990,7 +1003,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_6_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_6_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1009,7 +1022,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_7_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_7_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1028,7 +1041,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_8_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_8_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1051,7 +1064,7 @@
             </div>
             <div class="tab-pane fade" id="pills-furniture-arrivals" role="tabpanel" aria-labelledby="pills-furniture-arrivals-tab">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_1_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_1_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1070,7 +1083,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_2_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_2_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1089,7 +1102,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><span class="product__label product__label-cirle product__label-new">new</span><a href="#"> <img class="product__image" src="../images/product_3_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_3_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1108,7 +1121,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_4_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_4_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1127,7 +1140,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_5_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_5_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1146,7 +1159,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_6_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_6_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1165,7 +1178,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_7_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_7_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1184,7 +1197,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_8_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_8_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1207,7 +1220,7 @@
             </div>
             <div class="tab-pane fade" id="pills-decoration-arrivals" role="tabpanel" aria-labelledby="pills-decoration-arrivals-tab">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_1_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_1_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1226,7 +1239,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_2_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_2_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1245,7 +1258,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><span class="product__label product__label-cirle product__label-new">new</span><a href="#"> <img class="product__image" src="../images/product_3_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_3_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1264,7 +1277,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_4_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_4_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1283,7 +1296,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_5_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_5_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1302,7 +1315,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_6_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_6_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1321,7 +1334,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_7_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_7_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1340,7 +1353,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_8_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_8_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1363,7 +1376,7 @@
             </div>
             <div class="tab-pane fade" id="pills-lighting-arrivals" role="tabpanel" aria-labelledby="pills-lighting-arrivals-tab">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_1_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_1_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1382,7 +1395,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_2_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_2_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1401,7 +1414,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><span class="product__label product__label-cirle product__label-new">new</span><a href="#"> <img class="product__image" src="../images/product_3_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_3_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1420,7 +1433,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_4_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_4_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1439,7 +1452,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_5_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_5_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1458,7 +1471,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-sale">sale</span><a href="#"> <img class="product__image" src="../images/product_6_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_6_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1477,7 +1490,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-new">new</span><span class="product__label product__label-cirle product__label-out">out</span><a href="#"> <img class="product__image" src="../images/product_7_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_7_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1496,7 +1509,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="product text-center">
                     <figure class="product__media"> <span class="product__label product__label-cirle product__label-top">top</span><a href="#"> <img class="product__image" src="../images/product_8_1.jpg" alt="Image"/><img class="product__image-hover" src="../images/product_8_2.jpg" alt="Image"/></a>
                       <div class="product__action-vertical"><a class="btn-product-icon btn-wishlist btn-expandable"><span>go to wishlist</span></a><a class="btn-product-icon btn-quickview btn-expandable"><span>quick view</span></a></div>
@@ -1518,6 +1531,7 @@
               </div>
             </div>
           </div>
+          <div class="load-more-container text-center mt-0 mb-7"><a class="btn btn-outline-darker btn-load-more" href="#"><span class="mr-3">LOAD MORE PRODUCTS</span><i class="las la-sync"></i></a></div>
         </div>
       </section>
       <section class="service"> 
@@ -1595,7 +1609,7 @@
         </div>
       </section>
       <section class="cta"> 
-        <div class="container"> 
+        <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9 col-xl-8">
               <div class="cta__wrapper pt-4 pb-4">

@@ -37,5 +37,15 @@
       margin-bottom: 1.2rem;
       text-indent: -0.2rem;
     }
+
+    @include mq("sm", "max") {
+      .intro__title {
+        font-size: 3rem;
+      }
+
+      .intro__subtitle {
+        font-size: 1.4rem;
+      }
+    }
   }
 }

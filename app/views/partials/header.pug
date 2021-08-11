@@ -46,9 +46,22 @@ header.header
 		.header__middle
 			.container 
 				.header__left
+					button.menu__mobile-toggle
+						label(for="menu__input-check") 
+							i.las.la-bars
 					a.logo(href="#") 
 						img(src="../images/logo.png", alt="Logo")
+					input.menu__input#menu__input-check(type="checkbox" hidden)
+					label(for="menu__input-check").bg-overlay
 					nav.main__menu 
+						.menu__mobile
+							label.menu__mobile-close(for="menu__input-check")
+								i.las.la-times
+						form.mobile__search(action='#' method='get')
+							label.sr-only(for='mobile__search') Search
+							input#mobile__search.form-control(type='text' name='mobile__search' placeholder='Search product ...' required='' value='')
+							button.btn.btn-primary(type='submit')
+								i.las.la-search
 						ul.menu.menu__arrows
 							li 
 								a(href="#") Home
@@ -111,6 +124,17 @@ header.header
 								a(href="#") Blogs
 							li 
 								a(href="#") Elements
+						.mobile__socials
+							a.social__icon(href='#' title='Facebook')
+								i.lab.la-facebook-f
+							a.social__icon(href='#' title='Twitter')
+								i.lab.la-twitter
+							a.social__icon(href='#' title='Instagram')
+								i.lab.la-instagram
+							a.social__icon(href='#' title='Youtube')
+								i.lab.la-youtube
+							a.social__icon(href='#' title='Pinterest')
+								i.lab.la-pinterest
 				.header__right
 					.header__search
 						button.header__search-toggle.active

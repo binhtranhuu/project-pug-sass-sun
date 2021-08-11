@@ -7,6 +7,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  // @include mq("xs", "max") {
+  //   & {
+  //     display: none;
+  //   }
+  // }
 }
 
 .title-lg {
@@ -16,6 +22,11 @@
 }
 
 .service {
+  .container {
+    border-top: 1px solid #ebebeb;
+    padding-top: 3rem;
+  }
+
   .service__wrapper {
     text-align: center;
     padding: 2rem 0;
@@ -235,6 +246,50 @@
       font-size: 1.6rem;
       margin-top: 0.5rem;
       margin-bottom: 0;
+    }
+  }
+
+  @include mq("md", "max") {
+    .cta__wrapper {
+      flex-direction: column;
+    }
+
+    .cta__content {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+
+  @include mq("sm", "max") {
+    .cta__wrapper {
+      .cta__title {
+        font-size: 2rem;
+      }
+
+      .cta__desc {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@include mq("lg", "max") {
+  .post__wrapper {
+    .post__title {
+      font-size: 1.8rem;
+    }
+
+    .post__meta {
+      .post__date,
+      .post__comment {
+        font-size: 1.3rem;
+      }
+    }
+
+    .post__content {
+      p {
+        font-size: 1.3rem;
+      }
     }
   }
 }

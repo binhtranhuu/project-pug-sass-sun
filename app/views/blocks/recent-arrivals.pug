@@ -14,21 +14,25 @@ section.arrivals.mt-6
       #pills-all-arrivals.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-all-arrivals-tab')
         .row
           each val in products
-            .col-md-3
+            .col-lg-3.col-md-4
               +productList(val)
             
       #pills-furniture-arrivals.tab-pane.fade(role='tabpanel' aria-labelledby='pills-furniture-arrivals-tab')
         .row
           each val in products
-            .col-md-3
+            .col-lg-3.col-md-4
               +productList(val)
       #pills-decoration-arrivals.tab-pane.fade(role='tabpanel' aria-labelledby='pills-decoration-arrivals-tab')
         .row
           each val in products
-            .col-md-3
+            .col-lg-3.col-md-4
               +productList(val)
       #pills-lighting-arrivals.tab-pane.fade(role='tabpanel' aria-labelledby='pills-lighting-arrivals-tab')
         .row
           each val in products
-            .col-md-3
+            .col-lg-3.col-md-4
               +productList(val)
+    .load-more-container.text-center.mt-0.mb-7
+      a.btn.btn-outline-darker.btn-load-more(href='#')
+        span.mr-3 LOAD MORE PRODUCTS
+        i.las.la-sync

@@ -1,14 +1,14 @@
-section.intro.pt-5.pb-4 
+section.intro.pt-5.pb-4
   .container 
     .row 
-      .col-lg-8
+      .col-lg-8.mb-2
         +sliderIntro(sliderIntro)
       .col-lg-4
         .intro__banners
           .row 
-          each val in bannerIntro
-            .col-md-6.col-lg-12
-              +bannerIntro(val)
+            each val in bannerIntro
+              .col-md-6.col-lg-12
+                +bannerIntro(val)
               
     .mt-3
       .intro__brand
