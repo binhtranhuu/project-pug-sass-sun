@@ -1,49 +1,18 @@
 section.categories 
-  .container 
+  .container.pt-6
     h2.title-lg.text-center.mb-4 Shop by Categories
     .row 
       .col-sm-6.col-lg-4 
-        .banner.banner--overlay
-          figure 
-            img(src="../images/banner-category-1.jpg", alt="Banner Category")
-          .banner__content.banner__content--center 
-            a.banner__link
-              h3.banner__title Home Decor
-              span.banner__link-text
-                | Shop Now
-                i.las.la-long-arrow-alt-right.ml-2
+        +bannerCategories("banner-category-1.jpg", "Home Decor", "Shop Now")
 
       .col-sm-6.col-lg-4
         .row 
           .col-lg-12.col-sm-6.col-xs-12
-            .banner.banner--overlay
-              figure 
-                img(src="../images/banner-category-2.jpg", alt="Banner Category")
-              .banner__content.banner__content--center 
-                a.banner__link
-                  h3.banner__title Living Room
-                  span.banner__link-text
-                    | Shop Now
-                    i.las.la-long-arrow-alt-right.ml-2
+            +bannerCategories("banner-category-2.jpg", "Kitchen & Utensil", "Shop Now")
 
           .col-lg-12.col-sm-6.col-xs-12
-            .banner.banner--overlay
-              figure 
-                img(src="../images/banner-category-3.jpg", alt="Banner Category")
-              .banner__content.banner__content--center 
-                a.banner__link
-                  h3.banner__title Living Room
-                  span.banner__link-text
-                    | Shop Now
-                    i.las.la-long-arrow-alt-right.ml-2
+            +bannerCategories("banner-category-3.jpg", "Lighting", "Shop Now")
 
       .col-sm-6.col-lg-4
         .banner.banner--overlay
-          figure 
-            img(src="../images/banner-category-4.jpg", alt="Banner Category")
-          .banner__content.banner__content--center 
-            a.banner__link
-              h3.banner__title Living Room
-              span.banner__link-text
-                | Shop Now
-                i.las.la-long-arrow-alt-right.ml-2
+          +bannerCategories("banner-category-4.jpg", "Living Room", "Shop Now")

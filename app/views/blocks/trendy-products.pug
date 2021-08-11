@@ -1,0 +1,33 @@
+section.trendy.mt-6
+  .container
+    h2.text-center.title-lg.mb-2.mb-md-3 Trendy Products
+    ul#pills-tab.nav.nav-pills.nav-border-anim.mb-3.justify-content-center(role='tablist')
+      li.nav-item
+        a#pills-all-tab.nav-link.active(data-toggle='pill' href='#pills-all' role='tab' aria-controls='pills-all' aria-selected='true') All
+      li.nav-item
+        a#pills-furniture-tab.nav-link(data-toggle='pill' href='#pills-furniture' role='tab' aria-controls='pills-furniture' aria-selected='false') Furniture
+      li.nav-item
+        a#pills-decoration-tab.nav-link(data-toggle='pill' href='#pills-decoration' role='tab' aria-controls='pills-decoration' aria-selected='false') Decoration
+      li.nav-item
+        a#pills-lighting-tab.nav-link(data-toggle='pill' href='#pills-lighting' role='tab' aria-controls='pills-lighting' aria-selected='false') Lighting
+    #pills-tabContent.tab-content
+      #pills-all.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-all-tab')
+        .row
+          each val in products
+            .col-md-3
+              +productList(val)
+      #pills-furniture.tab-pane.fade(role='tabpanel' aria-labelledby='pills-furniture-tab')
+        .row
+          each val in products
+            .col-md-3
+              +productList(val)
+      #pills-decoration.tab-pane.fade(role='tabpanel' aria-labelledby='pills-decoration-tab')
+        .row
+          each val in products
+            .col-md-3
+              +productList(val)
+      #pills-lighting.tab-pane.fade(role='tabpanel' aria-labelledby='pills-lighting-tab')
+        .row
+          each val in products
+            .col-md-3
+              +productList(val)

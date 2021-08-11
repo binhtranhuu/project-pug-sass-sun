@@ -1,0 +1,10 @@
+mixin bannerCategories(thumbnail, title, action)
+  .banner.banner--overlay
+    figure 
+      img(src=`../images/${thumbnail}`, alt="Banner Category")
+    .banner__content.banner__content--center 
+      a.banner__link
+        h3.banner__title= title
+        span.banner__link-text
+          | #{action}
+          i.las.la-long-arrow-alt-right.ml-2

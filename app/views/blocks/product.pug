@@ -1,0 +1,41 @@
+section.products.pt-7.pb-7
+  .container 
+    h2.text-center.title-lg.mb-3.mb-md-4 Product
+    .row
+      .col-md-3 
+        .product.text-center 
+          figure.product__media 
+            span.product__label.product__label-cirle.product__label-new New
+            span.product__label.product__label-cirle.product__label-sale Sale
+            span.product__label.product__label-cirle.product__label-top Top
+            span.product__label.product__label-cirle.product__label-out Out
+            a(href="#") 
+              img.product__image(src="../images/product_1_1.jpg", alt="")
+              img.product__image-hover(src="../images/product_1_2.jpg", alt="")
+            .product__action-vertical
+              a.btn-product-icon.btn-wishlist.btn-expandable
+                span go to wishlist
+              a.btn-product-icon.btn-quickview.btn-expandable
+                span quick view
+
+          .product__body 
+            .product__category
+              a(href="#") Furniture
+              | ,
+              a(href="#") Tables
+            h3.product__title
+              a(href="#") 2-Seater
+            .product__price 
+              span.product__price-new $20.00
+              span.product__price-old $25.00
+            .product__ratings 
+              .ratings
+                i.las.la-star
+                i.las.la-star
+                i.las.la-star
+                i.las.la-star
+                i.las.la-star
+              span.ratings-text (6 Reviews)
+            .product__action
+              button.btn-product.btn-cart
+                span add to cart

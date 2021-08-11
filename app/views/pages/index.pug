@@ -4,10 +4,29 @@ block vars
 	-title = 'This Home Page'
 	-bodyClass = 'page-wrapper'
 
+block includes
+	include ../constants/slider-intro
+	include ../constants/brands
+	include ../constants/products
+	include ../constants/services
+	include ../constants/posts
+	include ../constants/banner-intro
+	include ../mixins/slider-intro
+	include ../mixins/brands
+	include ../mixins/product
+	include ../mixins/service
+	include ../mixins/post
+	include ../mixins/banner-intro
+	include ../mixins/banner-category
+	
+
 block main
 	main.main
 		include ../blocks/intro
+		include ../blocks/trendy-products
 		include ../blocks/category
+		include ../blocks/recent-arrivals
+		//- include ../blocks/product
 		include ../blocks/service
 		include ../blocks/posts
 		include ../blocks/call-to-action

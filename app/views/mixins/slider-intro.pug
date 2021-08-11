@@ -1,0 +1,25 @@
+mixin sliderIntro()
+  #carouselExampleControls.carousel.slide(data-ride='carousel')
+    .carousel-inner
+      each val in sliderIntro  
+        .carousel-item.intro__slider-container(class=val.status)
+          .intro__slide
+            figure.slide__image.mb-0 
+              picture 
+                img.d-block.w-100(src=`../images/${val.image}` alt='Slider')
+            .intro__content
+              .intro__content-wrapper 
+                h3.intro__subtitle= val.subtitle
+                h1.intro__title
+                  | #{val.titleOne}
+                  br
+                  | #{val.titleTwo}
+                a.btn.btn-outline-white(href='#')
+                  span= val.action
+                  i.las.la-long-arrow-alt-right
+    a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.sr-only Previous
+    a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.sr-only Next

@@ -1,26 +1,6 @@
 section.service 
-  .container 
-    .row
-      .col-md-4 
-        .service__wrapper
-          span.service__icon
-            i.las.la-rocket
-          .service__content 
-            h3.service__title Payment & Delivery
-            p Free shipping for orders over $50
-
-      .col-md-4 
-        .service__wrapper
-          span.service__icon
-            i.las.la-undo-alt
-          .service__content 
-            h3.service__title Return & Refund
-            p Free 100% money back guarantee
-
-      .col-md-4 
-        .service__wrapper
-          span.service__icon
-            i.las.la-life-ring
-          .service__content 
-            h3.service__title Quality Support
-            p Alway online feedback 24/7
+	.container 
+		.row
+			each val in services
+				.col-md-4
+					+serviceList(val)

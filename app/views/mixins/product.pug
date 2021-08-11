@@ -1,0 +1,59 @@
+mixin productList(props)
+	.product.text-center
+		figure.product__media  
+			+productLabel(props.label)
+			+productMedia(props.imageName, props.imageHoverName)
+			.product__action-vertical
+				a.btn-product-icon.btn-wishlist.btn-expandable
+					span go to wishlist
+				a.btn-product-icon.btn-quickview.btn-expandable
+					span quick view
+
+		.product__body 
+			+productCate(props.categories)
+			+productName(props.title)
+			+productPrice(props.newPrice, props.oldPrice)
+			+productRatings(props.numReview)
+			.product__action
+				button.btn-product.btn-cart
+					span add to cart
+
+mixin productLabel(props)
+	each val in props
+		span.product__label.product__label-cirle(class=`product__label-${val}`)= val
+
+mixin productMedia(image, imageHover)
+	a(href="#") 
+		img.product__image(src=`../images/${image}`, alt="Image")
+		img.product__image-hover(src=`../images/${imageHover}`, alt="Image")
+
+mixin productCate(props)
+	.product__category
+		each val in props
+			a(href="#")= val
+
+mixin productName(title)
+	h3.product__title
+		a(href="#")= title
+
+mixin productPrice(newPrice, oldPrice)
+	.product__price 
+		span.product__price-new= newPrice
+		span.product__price-old= oldPrice
+
+mixin productRatings(num)
+	.product__ratings 
+		.ratings
+			i.las.la-star
+			i.las.la-star
+			i.las.la-star
+			i.las.la-star
+			i.las.la-star
+		span.ratings-text (#{num} Reviews)
+	
+
+
+		
+	
+
+	

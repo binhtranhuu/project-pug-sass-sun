@@ -1,0 +1,34 @@
+section.arrivals.mt-6
+  .container
+    h2.text-center.title-lg.mb-2.mb-md-3 Recent Arrivals
+    ul#pills-tab.nav.nav-pills.nav-border-anim.mb-3.justify-content-center(role='tablist')
+      li.nav-item
+        a#pills-all-arrivals-tab.nav-link.active(data-toggle='pill' href='#pills-all-arrivals' role='tab' aria-controls='pills-all-arrivals' aria-selected='true') All
+      li.nav-item
+        a#pills-furniture-arrivals-tab.nav-link(data-toggle='pill' href='#pills-furniture-arrivals' role='tab' aria-controls='pills-furniture-arrivals' aria-selected='false') Furniture
+      li.nav-item
+        a#pills-decoration-arrivals-tab.nav-link(data-toggle='pill' href='#pills-decoration-arrivals' role='tab' aria-controls='pills-decoration-arrivals' aria-selected='false') Decoration
+      li.nav-item
+        a#pills-lighting-arrivals-tab.nav-link(data-toggle='pill' href='#pills-lighting-arrivals' role='tab' aria-controls='pills-lighting-arrivals' aria-selected='false') Lighting
+    #pills-tabContent.tab-content
+      #pills-all-arrivals.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-all-arrivals-tab')
+        .row
+          each val in products
+            .col-md-3
+              +productList(val)
+            
+      #pills-furniture-arrivals.tab-pane.fade(role='tabpanel' aria-labelledby='pills-furniture-arrivals-tab')
+        .row
+          each val in products
+            .col-md-3
+              +productList(val)
+      #pills-decoration-arrivals.tab-pane.fade(role='tabpanel' aria-labelledby='pills-decoration-arrivals-tab')
+        .row
+          each val in products
+            .col-md-3
+              +productList(val)
+      #pills-lighting-arrivals.tab-pane.fade(role='tabpanel' aria-labelledby='pills-lighting-arrivals-tab')
+        .row
+          each val in products
+            .col-md-3
+              +productList(val)

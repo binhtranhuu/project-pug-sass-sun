@@ -2,90 +2,15 @@ section.intro.pt-5.pb-4
   .container 
     .row 
       .col-lg-8
-        #carouselExampleControls.carousel.slide(data-ride='carousel')
-          .carousel-inner
-            .carousel-item.intro__slider-container
-              .intro__slide
-                figure.slide__image.mb-0 
-                  picture 
-                    img.d-block.w-100(src='../images/slide-1-2.png' alt='Slider')
-                .intro__content
-                  .intro__content-wrapper 
-                    h3.intro__subtitle Topsale Collection
-                    h1.intro__title
-                      | Best Lighting
-                      br
-                      | Collection
-                    a.btn.btn-outline-white(href='#')
-                      span SHOP NOW
-                      i.las.la-long-arrow-alt-right
-            .carousel-item.active.intro__slider-container
-              .intro__slide
-                figure.slide__image.mb-0 
-                  picture 
-                    img.d-block.w-100(src='../images/slide-2-2.png' alt='Slider')
-                .intro__content
-                  .intro__content-wrapper 
-                    h3.intro__subtitle Topsale Collection
-                    h1.intro__title
-                      | Wood Cabinet
-                      br
-                      | Collection
-                    a.btn.btn-outline-white(href='#')
-                      span SHOP NOW
-                      i.las.la-long-arrow-alt-right
-          a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
-            span.carousel-control-prev-icon(aria-hidden='true')
-            span.sr-only Previous
-          a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
-            span.carousel-control-next-icon(aria-hidden='true')
-            span.sr-only Next
+        +sliderIntro(sliderIntro)
       .col-lg-4
         .intro__banners
           .row 
+          each val in bannerIntro
             .col-md-6.col-lg-12
-              .banner
-                img(src="../images/banner-1.jpg", alt="Banner")
-                .banner__content 
-                  h4.banner__subtitle Clearence
-                  h3.banner__title
-                    a(href='#')
-                      | Chairs & Chaises
-                      br
-                      | Up to 40% off
-                  a.banner__link(href='#') Shop Now
-
-            .col-md-6.col-lg-12
-              .banner
-                img(src="../images/banner-2.jpg", alt="Banner")
-                .banner__content 
-                  h4.banner__subtitle New in
-                  h3.banner__title
-                    a(href='#')
-                      | Kitchen & Dinning
-                      br
-                      | Collection
-                  a.banner__link(href='#') Discover Now
+              +bannerIntro(val)
+              
     .mt-3
       .intro__brand
-        .brand
-          a.brand__link(href="#") 
-            img(src="../images/brand-1.png", alt="Brand")
-        .brand
-          a.brand__link(href="#") 
-            img(src="../images/brand-2.png", alt="Brand")
-        .brand
-          a.brand__link(href="#") 
-            img(src="../images/brand-3.png", alt="Brand")
-        .brand
-          a.brand__link(href="#") 
-            img(src="../images/brand-4.png", alt="Brand")
-        .brand
-          a.brand__link(href="#") 
-            img(src="../images/brand-5.png", alt="Brand")
-        .brand
-          a.brand__link(href="#") 
-            img(src="../images/brand-6.png", alt="Brand")
-        .brand
-          a.brand__link(href="#") 
-            img(src="../images/brand-7.png", alt="Brand")
+        each val in brands
+          +brandList(val)

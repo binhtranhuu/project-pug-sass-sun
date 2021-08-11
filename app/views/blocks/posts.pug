@@ -1,57 +1,11 @@
 section.posts.pt-7.pb-7
   .container 
     h2.text-center.title-lg.mb-3.mb-md-4 From Our Blog
-    .row 
-      .col-md-4 
-        article.post__wrapper 
-          figure.post__media
-            a(href="#") 
-              img.post_img(src="../images/post_1.jpg", alt="Post")
-          .post__content 
-            .post__meta 
-              a.post__date(href="#") Sep 22, 2020
-              a.post__comment(href="#") 
-                span.post__comment-count 2 
-                | Comments
-            h2.post__title 
-              a(href="#") Sed adipiscing odbrnare.
-            .post__content 
-              p.post__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.Pelletesque aliquet nibh necurna.
-              a.read-more(href="#")  Read More
-
-      .col-md-4 
-        article.post__wrapper 
-          figure.post__media
-            a(href="#") 
-              img.post_img(src="../images/post_2.jpg", alt="Post")
-          .post__content 
-            .post__meta 
-              a.post__date(href="#") Sep 22, 2020
-              a.post__comment(href="#") 
-                span.post__comment-count 2 
-                | Comments
-            h2.post__title 
-              a(href="#") Sed adipiscing odbrnare.
-            .post__content 
-              p.post__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.Pelletesque aliquet nibh necurna.
-              a.read-more(href="#")  Read More
-
-      .col-md-4 
-        article.post__wrapper 
-          figure.post__media
-            a(href="#") 
-              img.post_img(src="../images/post_3.jpg", alt="Post")
-          .post__content 
-            .post__meta 
-              a.post__date(href="#") Sep 22, 2020
-              a.post__comment(href="#") 
-                span.post__comment-count 2 
-                | Comments
-            h2.post__title 
-              a(href="#") Sed adipiscing odbrnare.
-            .post__content 
-              p.post__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.Pelletesque aliquet nibh necurna.
-              a.read-more(href="#")  Read More
+    .row
+      each val in posts
+        .col-md-4
+          +postList(val)
+        
     .more-container.text-center.mt-4
       a.btn.btn-outline-darker.btn-more(href='#')
         span View more articles

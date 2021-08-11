@@ -1,0 +1,11 @@
+mixin bannerIntro(props)
+  .banner
+    img(src=`../images/${props.thumbnail}`, alt="Banner")
+    .banner__content 
+      h4.banner__subtitle= props.subtitle
+      h3.banner__title
+        a(href='#')
+          | #{props.titleOne}
+          br
+          | #{props.titleTwo}
+      a.banner__link(href='#')= props.action

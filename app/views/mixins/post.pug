@@ -1,0 +1,16 @@
+mixin postList(props)
+  article.post__wrapper 
+    figure.post__media
+      a(href="#") 
+        img.post_img(src=`../images/${props.thumbnail}`, alt="Post")
+    .post__content 
+      .post__meta 
+        a.post__date(href="#")= props.data
+        a.post__comment(href="#") 
+          span.post__comment-count= props.numComment
+          | Comments
+      h2.post__title 
+        a(href="#")= props.title
+      .post__content 
+        p.post__desc= props.desc
+        a.read-more(href="#")  Read More

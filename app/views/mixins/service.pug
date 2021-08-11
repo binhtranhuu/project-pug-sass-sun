@@ -1,0 +1,7 @@
+mixin serviceList(prop)
+	.service__wrapper
+		span.service__icon
+			i(class= prop.icon)
+		.service__content 
+			h3.service__title= prop.title
+			p= prop.desc
